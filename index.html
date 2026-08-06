@@ -135,7 +135,8 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.7",
-        "reviewCount": 4429
+        "reviewCount": 4460,
+        "url": "https://www.google.com/search?q=dalton+subaru#lrd=0x80d95212f409b72d:0xd568cfc83045d35,1,,,,"
       },
       "award": [
         "Subaru Love Promise Community Commitment Award"
@@ -1203,6 +1204,20 @@
   .findlay-band a.tel { color: inherit; }
   .findlay-band a.tel:hover { color: #9cc8ff; }
 
+  /* ---------- Google review links ---------- */
+  /* Every review figure on the page links to the live Google reviews panel,
+     so the authoritative count is always one click away. */
+  a.greview { color: inherit; text-decoration: none; display: block; }
+  a.greview:hover { color: var(--blue); }
+  a.greview:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: var(--radius-xs); }
+  .findlay-band a.greview { color: inherit; }
+  .findlay-band a.greview:hover { color: #9cc8ff; }
+  .findlay-band a.greview:focus-visible { outline-color: #9cc8ff; }
+  .hero-meta a.greview, .cta-inline a.greview { display: inline; }
+  /* The strips centre their contents; let the wrapping link fill the cell so
+     the existing min-height and centring rules resolve exactly as before. */
+  .spec-strip a.greview, .trust-grid a.greview, .gutter .chip a.greview { width: 100%; }
+
   /* ---------- Accessibility ---------- */
   .visually-hidden {
     position: absolute; width: 1px; height: 1px;
@@ -1307,7 +1322,7 @@
       <div class="item"><div class="lbl">Address</div><div class="val">2829 National City Blvd<small>National City, CA 91950</small></div></div>
       <div class="item"><div class="lbl">Sales Hours</div><div class="val">Mon-Sat 8:30-8<small>Sun 10-6</small></div></div>
       <div class="item"><div class="lbl">Contact</div><div class="val"><a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a><small>Mile of Cars · National City</small></div></div>
-      <div class="item"><div class="lbl">Reviews</div><div class="val">4.7 ★ · 4,429<small>Google · Dalton Subaru</small></div></div>
+      <div class="item"><div class="lbl">Reviews</div><div class="val"><a class="greview" href="https://www.google.com/search?q=dalton+subaru#lrd=0x80d95212f409b72d:0xd568cfc83045d35,1,,,," rel="noopener" target="_blank" aria-label="Read Dalton Subaru National City's Google reviews"><span data-review-rating>4.7</span> ★ · <span data-review-count>4,460</span></a><small>Google · Dalton Subaru</small></div></div>
     </div>
   </div>
 
@@ -1458,7 +1473,7 @@
         <div class="meta">
           <div class="meta-item"><span class="k">Address</span><span class="v">2829 National City Blvd, National City CA</span></div>
           <div class="meta-item"><span class="k">Contact</span><span class="v"><a class="tel" href="https://www.subarudalton.com/contactus.aspx">Dalton Subaru Contact Portal</a></span></div>
-          <div class="meta-item"><span class="k">Reviews</span><span class="v">4.7 ★ · 4,429 Google</span></div>
+          <div class="meta-item"><span class="k">Reviews</span><span class="v"><a class="greview" href="https://www.google.com/search?q=dalton+subaru#lrd=0x80d95212f409b72d:0xd568cfc83045d35,1,,,," rel="noopener" target="_blank" aria-label="Read Dalton Subaru National City's Google reviews"><span data-review-rating>4.7</span> ★ · <span data-review-count>4,460</span> Google</a></span></div>
           <div class="meta-item"><span class="k">Hours</span><span class="v">Mon-Sat 8:30-8 · Sun 10-6</span></div>
         </div>
       </aside>
@@ -1578,7 +1593,7 @@
         <p class="lede">We are at <strong>2829 National City Blvd, National City, CA 91950</strong>, on the National City Mile of Cars, serving National City, Chula Vista, and San Diego County. Getting from "Subaru Outback lease offers" to driving one off the Mile of Cars is straightforward.</p>
 
         <div class="spec-strip stats">
-          <div class="item"><div class="num">4.7<small> ★</small></div><div class="lbl">Google rating across 4,429 reviews</div></div>
+          <div class="item"><a class="greview" href="https://www.google.com/search?q=dalton+subaru#lrd=0x80d95212f409b72d:0xd568cfc83045d35,1,,,," rel="noopener" target="_blank" aria-label="Read Dalton Subaru National City's Google reviews"><div class="num"><span data-review-rating>4.7</span><small> ★</small></div><div class="lbl">Google rating across <span data-review-count>4,460</span> reviews</div></a></div>
           <div class="item"><div class="num">TSP+</div><div class="lbl">IIHS Top Safety Pick+ on the 2026 Outback</div></div>
           <div class="item"><div class="num">27<small> mpg</small></div><div class="lbl">EPA combined on 2026 non-turbo trims</div></div>
           <div class="item"><div class="num">Love</div><div class="lbl">Subaru Love Promise Community Commitment Award</div></div>
@@ -1622,9 +1637,11 @@
     <aside class="gutter" aria-label="Trust signals">
       <div class="chip">
         <div class="lbl">Google rating</div>
-        <div class="stars">★★★★★</div>
-        <strong style="font-size:28px;">4.7</strong>
-        <div class="sub">Across 4,429 customer reviews</div>
+        <a class="greview" href="https://www.google.com/search?q=dalton+subaru#lrd=0x80d95212f409b72d:0xd568cfc83045d35,1,,,," rel="noopener" target="_blank" aria-label="Read Dalton Subaru National City's Google reviews">
+          <div class="stars">★★★★★</div>
+          <strong style="font-size:28px;"><span data-review-rating>4.7</span></strong>
+          <div class="sub">Across <span data-review-count>4,460</span> customer reviews</div>
+        </a>
       </div>
       <div class="chip">
         <div class="lbl">Contact</div>
@@ -1650,12 +1667,14 @@
   <div class="wrap">
     <div class="eyebrow">Dalton Subaru National City</div>
     <h2>Why lease or finance on the <em>Mile of Cars</em>.</h2>
-    <p class="band-deck">Where you sign matters as much as what you sign. This is the same store and the same team San Diego County drivers have trusted for years, now operating as Dalton Subaru National City under the Dalton Corporation, so the people structuring your Outback lease or finance deal today have been doing it in this market for years. The dealership sits on the National City Mile of Cars at 2829 National City Blvd, minutes from Chula Vista and central San Diego, and carries a 4.7-star Google rating backed by roughly 4,400+ reviews from local owners, a fair signal to weigh when you're deciding where to commit to a multi-year lease or loan.</p>
+    <p class="band-deck">Where you sign matters as much as what you sign. This is the same store and the same team San Diego County drivers have trusted for years, now operating as Dalton Subaru National City under the Dalton Corporation, so the people structuring your Outback lease or finance deal today have been doing it in this market for years. The dealership sits on the National City Mile of Cars at 2829 National City Blvd, minutes from Chula Vista and central San Diego, and carries a <a class="tel" href="https://www.google.com/search?q=dalton+subaru#lrd=0x80d95212f409b72d:0xd568cfc83045d35,1,,,," rel="noopener" target="_blank"><strong><span data-review-rating>4.7</span>-star Google rating backed by <span data-review-count>4,460</span> reviews</strong></a> from local owners, a fair signal to weigh when you're deciding where to commit to a multi-year lease or loan.</p>
 
     <div class="trust-grid">
       <div class="item">
-        <div class="num">4.7<small> ★</small></div>
-        <div class="lbl">Google rating across<br>4,429 reviews</div>
+        <a class="greview" href="https://www.google.com/search?q=dalton+subaru#lrd=0x80d95212f409b72d:0xd568cfc83045d35,1,,,," rel="noopener" target="_blank" aria-label="Read Dalton Subaru National City's Google reviews">
+          <div class="num"><span data-review-rating>4.7</span><small> ★</small></div>
+          <div class="lbl">Google rating across<br><span data-review-count>4,460</span> reviews</div>
+        </a>
       </div>
       <div class="item">
         <div class="num">TSP<small>+</small></div>
@@ -1867,6 +1886,49 @@
     </div>
   </div>
 </section>
+
+<script>
+  /* ------------------------------------------------------------------
+     GOOGLE REVIEW FIGURES — SINGLE SOURCE OF TRUTH
+     ------------------------------------------------------------------
+     Every review badge on this page reads from the object below, so the
+     rating and count only ever need to be changed in ONE place. The static
+     values in the HTML are the no-JS fallback and are kept in sync here.
+
+     To refresh by hand: check the live count at the DALTON_REVIEWS.url
+     below, then update `count` (and `rating` if it moved). Also update
+     "reviewCount" in the AutoDealer JSON-LD block in <head> — search
+     engines read that from the markup, not from this script.
+
+     To refresh automatically: replace the literal below with a fetch of
+     the Google Places API "Place Details" endpoint (field
+     `userRatingCount`), proxied server-side so the API key is not exposed.
+     This store's Google listing is identified by the feature id
+     0x80d95212f409b72d:0xd568cfc83045d35 (CID 962072114479214389), taken
+     from the live Maps listing. A static page cannot call Google directly:
+     the Places API sends no CORS headers and the key would be public.
+     ------------------------------------------------------------------ */
+  window.DALTON_REVIEWS = {
+    rating: "4.7",
+    count: 4460,
+    url: "https://www.google.com/search?q=dalton+subaru#lrd=0x80d95212f409b72d:0xd568cfc83045d35,1,,,,"
+  };
+
+  (function () {
+    var r = window.DALTON_REVIEWS;
+    if (!r) return;
+    var count = Number(r.count).toLocaleString("en-US");
+    document.querySelectorAll("[data-review-count]").forEach(function (el) {
+      el.textContent = count;
+    });
+    document.querySelectorAll("[data-review-rating]").forEach(function (el) {
+      el.textContent = r.rating;
+    });
+    document.querySelectorAll("a.greview, a[href*='lrd=']").forEach(function (el) {
+      el.setAttribute("href", r.url);
+    });
+  })();
+</script>
 
 <script>
   // Sticky TOC: highlight the section currently in view
